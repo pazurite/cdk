@@ -8,14 +8,14 @@ const { resolveRoot } = require('./helpers');
 
 module.exports = {
   entry: {
-    main: resolveRoot('src/main.js'),
+    main: resolveRoot('app/main.ts'),
   },
   resolve: {
     alias: {
       vue$: 'vue/dist/vue.esm.js',
-      '@': resolveRoot('src'),
+      '@': resolveRoot('packages'),
     },
-    extensions: ['.mjs', '.js', '.jsx', '.vue', '.json', '.wasm'],
+    extensions: ['.mjs', '.ts', '.tsx', '.vue', '.js', '.jsx', '.json', '.wasm'],
   },
   module: {
     rules: [
@@ -25,8 +25,6 @@ module.exports = {
       },
       {
         test: /\.(j|t)sx?$/,
-        include: [resolveRoot('src')],
-        exclude: /node_modules/,
         loader: 'babel-loader',
       },
       {
