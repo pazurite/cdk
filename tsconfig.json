@@ -5,7 +5,7 @@
     "allowSyntheticDefaultImports": true,
     "target": "es5",
     "lib": ["es2017", "dom"],
-    "allowJS": true,
+    "allowJs": true,
     "noImplicitAny": true,
     "moduleResolution": "node",
     "sourceMap": true,
@@ -13,6 +13,8 @@
     "outDir": "dist",
     "baseUrl": "./",
     "strictNullChecks": true,
+    "types": ["node", "node-sass"],
+    "typeRoots": ["typings/index.d.ts"],
     "paths": {
       "@/*": ["packages/*"]
     }
