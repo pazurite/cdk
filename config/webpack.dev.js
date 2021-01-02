@@ -19,8 +19,8 @@ module.exports = merge(commonConfig, {
         test: /\.(sc|sa|c)ss$/,
         use: [
           'vue-style-loader',
-          { loader: 'css-loader', options: { sourceMap: true } },
-          { loader: 'sass-loader', options: { sourceMap: true } },
+          { loader: 'css-loader', options: { esModule: false } },
+          { loader: 'sass-loader' },
         ],
       },
     ],
